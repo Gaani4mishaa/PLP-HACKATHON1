@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Amina Mohamed | Portfolio</title>
+
+</head>
+<body>
+  <div class="container">
+
+  <header>
+    <h1>Amina Mohamed</h1>
+    <button id="darkModeToggle" style="position:fixed; top:1rem; right:1rem; z-index:999;">🌙</button>
+
+    <nav>
+      <nav class="navbar">
+  <div class="logo">Amina</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</nav>
+
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="images/profile.jpg" alt="Amina Profile" class="profile-pic">
+    
+   <p> Hi I'm Amina, a passionate software engineer who loves creating useful tech that solves real problems.</p> 
+  <p>I enjoy working with front-end tools and building digital solutions that make a difference.</p>
+<p>I specialize in HTML, CSS, JavaScript, Python, and SQL, and Ihave used tools like Bootstrap and Django to bring projects to life.</p>
+<p>I'm currently studying software engineering at USIU-Africa, and Im focused on becoming a better UI/UX designer while preparing for my next internship.</p>
+<p>Beyond coding, I value clear communication, adaptability, and continuous learning.</p>
+  </section>
+
+  <section id="education">
+    <h2>Educational Background</h2>
+    <p>BSc. in software Engineering, United States International University-Africa.</p>
+    <a href="CV/Amina_CV.pdf" download class="btn">📄 Download My CV</a>
+
+  </section>
+
+  <section id="skills">
+    <h2>Programming Languages</h2>
+    <ul>
+      <div class="skills">
+  <div class="skill">
+    <span>Python</span>
+    <div class="progress">
+      <div class="progress-bar" style="width: 85%;">85%</div>
+    </div>
+  </div>
+  <div class="skill">
+    <span>Django</span>
+    <div class="progress">
+      <div class="progress-bar" style="width: 75%;">75%</div>
+    </div>
+  </div>
+  <div class="skill">
+    <span>HTML/CSS</span>
+    <div class="progress">
+      <div class="progress-bar" style="width: 90%;">90%</div>
+    </div>
+  </div>
+  <div class="skill">
+    <span>SQL</span>
+    <div class="progress">
+      <div class="progress-bar" style="width: 70%;">70%</div>
+    </div>
+  </div>
+</div>
+
+    </ul>
+  </section>
+
+  <section id="interests">
+    <h2>Interests</h2>
+    <p>I'm excited about UI/UX design, web development, cybersecurity, and using technology to solve real problems in Africa.</p>
+  </section>
+
+  <section id="projects">
+  <h2>Projects</h2>
+
+  <div class="project-card">
+    <img src="Images/projectt.JPEG" alt="Smart Recipe Hub">
+
+    <h3>Smart Recipe Hub</h3>
+    <p>Django web app to search for recipes using ingredients.</p>
+    <a href="https://github.com/Gaani4mishaa/smartrecipehub.git" target="_blank">View Code</a>
+  </div>
+
+</section>
+
+
+  
+  <section id="contact">
+  <h2>Contact Me</h2>
+  <p>If you'd like to collaborate or just say hi, feel free to reach out!</p>
+  <ul>
+  <li>Email: <a href="mailto:amishmohamedd@gmail.com">amishmohamedd@gmail.com</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/amina-mohamed-47794b297?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bl9i9BG4pR5qimxMccPbX%2FQ%3D%3D" target="_blank">linkedin.com/in/amina</a></li>
+    <li>GitHub: <a href="https://github.com/Gaani4mishaa" target="_blank">github.com/amina</a></li>
+  </ul>
+</section>
+
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+  <footer>
+    <p>© 2025 Amina Mohamed | All Rights Reserved</p>
+  </footer>
+</div>
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" style="display:none;">↑</button>
+
+<!-- Scroll to Top Script -->
+<script>
+  window.onscroll = function () {
+    let btn = document.getElementById("scrollToTopBtn");
+    btn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
+  };
+
+  document.getElementById("scrollToTopBtn").onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+
+<script>
+  const toggle = document.getElementById("darkModeToggle");
+  toggle.onclick = () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  };
+</script>
+<script>
+  function toggleMenu() {
+    const links = document.getElementById("navLinks");
+    links.classList.toggle("active");
+  }
+</script>
+<script>
+  function toggleMenu() {
+    const links = document.getElementById("navLinks");
+    links.classList.toggle("active");
+  }
+</script>
+
+
+</body>
+</html>
